@@ -1,3 +1,4 @@
+/*eslint quotes: ["error", "double", { "avoidEscape": true }]*/
 import { todos, updateUI } from "./ModifyTodos.js";
 
 const changeTodoStatus = ({ index, status }) => {
