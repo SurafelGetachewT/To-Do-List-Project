@@ -1,3 +1,8 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable comma-dangle */
+/* eslint-disable indent */
+/* eslint-disable linebreak-style */
+/* eslint quotes: ["error", "double", { "avoidEscape": true }] */
 const testFunc = (a, b) => a + b;
 let todos = JSON.parse(localStorage.getItem("todos")) || []; // eslint-disable-line
 
