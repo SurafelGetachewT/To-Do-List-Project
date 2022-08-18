@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+    --white: #fff;
+    --lightest-gray: #f1f2f5;
+    --lighter-gray: #d1d1d3;
+    --light-gray: #ddd;
+    --medium-gray: #545862;
+    --dark-gray: #333;
+    --black: #000;
+    --body-shadow: rgba(0, 0, 0, 0.15);
+    --blue-color: #2e8ae6;
+    --edit-focus-color: #fffecb;
+}
+
+*,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    background-image: #fff;
+}
+
+.todo-container {
+    width: 450px;
+    padding: 40px 20px 90px 20px;
+    min-height: calc(65vh);
+    margin: 7vh 0;
+    box-shadow: 0 2px 8px var(--body-shadow);
+    background-color: #333;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.todo-list {
+    height: 50px;
+    width: calc(100% - 40px);
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #061836;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.todo-intro {
+    font-size: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.todo-intro-title {
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+    align-items: center;
+}
+
+.todo-intro i {
+    font-size: 17px;
+    opacity: 0.5;
+    color: var(--dark-gray);
+}
+
+.todo-add {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+    margin: 20px 0 20px 0;
+}
+
+.todo-add * {
+    color: #fff;
+}
+
+.todo-add input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.todo-add input::placeholder {
+    color: #d3dfff;
+}
+
+.todo-add i {
+    font-size: 12px;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.todo-add i:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.todo-item {
+    position: relative;
+}
+
+.todo-list-group {
+    width: 100%;
+}
+
+.edit-focus-element {
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 0;
+
+    /* background-color: #0043af; */
+    border-radius: 8px;
+}
+
+.checked-icon {
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checked-icon,
+.unchecked-icon {
+    width: 20px;
+    height: 20px;
+    border: 2px #fff solid;
+}
+
+.unchecked-icon {
+    font-size: 13px;
+    background-color: transparent;
+    color: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.todo-item input {
+    width: calc(100% - 30px);
+    padding: 0 15px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 100;
+    text-align: start;
+    position: relative;
+    z-index: 1;
+}
+
+.undecoration {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.decoration {
+    color: #fff;
+    text-decoration: line-through;
+}
+
+.delete-icon,
+.more-icon {
+    font-size: 17px;
+    cursor: pointer;
+    opacity: 0.95;
+    color: #fff;
+}
+
+.delete-icon {
+    display: none;
+}
+
+.more-icon {
+    display: block;
+}
+
+.clear-todo {
+    width: calc(100% - 40px);
+    height: 50px;
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.clear-todo span {
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+}
+
+.clear-todo span:hover {
+    text-decoration: underline;
+}
+
+.edit-todo {
+    color: #fff;
+}
+
+.edit-todo:focus~.edit-focus-element {
+    background-color: #1b1b7293;
+}
+
+.delete-icon:active {
+    display: block;
+}
+
+.edit-todo:focus~.delete-icon {
+    display: block;
+}
+
+.edit-todo:focus~.more-icon {
+    display: none;
+}
+
+.delete-icon:active~.more-icon {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .todo-container {
+        width: calc(90% - 40px);
+    }
+}
