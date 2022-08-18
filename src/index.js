@@ -1,4 +1,4 @@
-/*eslint quotes: ["error", "double", { "avoidEscape": true }] */
+/* eslint quotes: ["error", "double", { "avoidEscape": true }] */
 import _ from "lodash"; // eslint-disable-line
 import "./style.css";
 import { addTodos, deleteTodos, editTodos, getTodos } from "./ModifyTodos.js";

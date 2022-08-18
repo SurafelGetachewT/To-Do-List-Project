@@ -1,4 +1,4 @@
-/*eslint quotes: ["error", "double", { "avoidEscape": true }]*/
+/* eslint quotes: ["error", "double", { "avoidEscape": true }] */
 const testFunc = (a, b) => a + b;
 let todos = JSON.parse(localStorage.getItem("todos")) || []; // eslint-disable-line
 

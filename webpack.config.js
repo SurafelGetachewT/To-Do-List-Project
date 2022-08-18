@@ -1,4 +1,4 @@
-/*eslint quotes: ["error", "double", { "avoidEscape": true }]*/
+/* eslint quotes: ["error", "double", { "avoidEscape": true }] */
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
