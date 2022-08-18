@@ -1,9 +1,8 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable quotes */
-/* eslint-disable linebreak-style */
 /**
  * @jest-environment jsdom
  */
+/* eslint-disable linebreak-style */
+/* eslint quotes: ["error", "double", { "avoidEscape": true }] */
 import { addTodos, deleteTodos, todos } from "../ModifyTodos.js";
 
 document.body.innerHTML = '<ul class="todo-list-group"></ul>';
