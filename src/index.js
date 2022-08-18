@@ -23,10 +23,12 @@ listGroup.addEventListener("click", (event) => {
   const clickedItem = event.target.classList[event.target.classList.length - 1];
   const li = event.target.parentElement;
   if (clickedItem === "delete-icon") deleteTodos(li.id);
-  if (clickedItem === "checked-icon")
+  if (clickedItem === "checked-icon") {
     changeTodoStatus({ index: li.id, status: false });
-  if (clickedItem === "unchecked-icon")
+  }
+  if (clickedItem === "unchecked-icon") {
     changeTodoStatus({ index: li.id, status: true });
+  }
 });
 
 listGroup.addEventListener("keypress", (event) => {
