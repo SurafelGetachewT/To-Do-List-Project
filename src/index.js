@@ -1,3 +1,8 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable operator-linebreak */
+/* eslint-disable linebreak-style */
+/* eslint-disable object-curly-newline */
+/* eslint-disable linebreak-style */
 /* eslint quotes: ["error", "double", { "avoidEscape": true }] */
 import _ from "lodash"; // eslint-disable-line
 import "./style.css";
