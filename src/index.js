@@ -22,6 +22,7 @@ newTask.addEventListener("keypress", (event) => {
 submitIcon.addEventListener("click", () => {
   if (newTask.value === "") return;
   addTodos(newTask.value);
+  newTask.value =" ";
 });
 
 listGroup.addEventListener("click", (event) => {
