@@ -17,12 +17,13 @@ newTask.addEventListener("keypress", (event) => {
   if (newTask.value === "") return;
   if (event.key === "Enter" || event === "clicked") {
     addTodos(newTask.value);
+    newTask.value = " ";
   }
 });
 submitIcon.addEventListener("click", () => {
   if (newTask.value === "") return;
   addTodos(newTask.value);
-  newTask.value =" ";
+  newTask.value = " ";
 });
 
 listGroup.addEventListener("click", (event) => {
